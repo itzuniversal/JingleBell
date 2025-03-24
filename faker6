@@ -1,0 +1,478 @@
+--  Fake R6 Made By Universal. Thank's for your hot reanimate, oxide!
+local script = Instance.new("LocalScript")
+local OxideApi = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/Utils/refs/heads/main/OxideApi"))()
+OxideApi.Notification("Fake R6 V1.78, Made by universal. Thank you oxide.",10)
+task.wait(10)
+OxideApi.Notification("/e cheer, /e laugh coming, and tool holding coming soon!",4)
+local playanother = false
+local playing = false
+local dancing = false
+local rtrnv;
+local c;
+local tbl3;
+local v;
+local anim;
+local count;
+local hhhh;
+local asdf;
+local s;
+local animid;
+local plr;
+local char = game:GetService("Players").LocalPlayer.Character
+local cframe;
+local torso;
+local rs;
+local ls;
+local rh;
+local lh;
+local n;
+local rj;
+local rsc0;
+local lsc0;
+local rhc0;
+local lhc0;
+local rjc0;
+local nc02;
+local gc0;
+local orsc0;
+local olsc0;
+local orhc0;
+local olhc0;
+local orjc0;
+local onc0;
+local count2;
+local maxcount2;
+local wtfloop
+local walking = false
+local idle = false
+local RunService = game:GetService("RunService")
+local function getnext(tbl,number)
+	c=100
+	rtrnv=0
+	for i,v in pairs(tbl) do
+		if i>number and i-number<c then
+c=i-number
+rtrnv=i
+		end
+	end
+	return(rtrnv)
+end
+local function wait2(tim)
+	if tim<0.1 then
+		game:GetService("RunService").Heartbeat:Wait()
+	else
+		for i=1,tim*40 do
+game:GetService("RunService").Heartbeat:Wait()
+		end
+	end
+end
+local function kftotbl(kf) -- Below this is literal pain..
+	tbl3 = {}
+	for i,v in pairs(kf:GetDescendants()) do
+		if v:IsA("Pose") then
+tbl3[string.sub(v.Name,1,1)..string.sub(v.Name,#v.Name,#v.Name)] = v.CFrame
+		end
+	end
+	return(tbl3)
+end
+local sound69 = Instance.new("Sound",game:GetService("RunService"))
+sound69.Looped = true
+sound69.Name = "danc"
+sound69.Playing = true
+sound69.Volume = 1
+local plr = game.Players.LocalPlayer
+local RunService = game:GetService("RunService")
+
+local function functionToBind()
+    char.Humanoid:Move(Vector3.new(0,0,-1),false)
+end
+
+ArtificialHB = Instance.new("BindableEvent",script)
+ArtificialHB.Name = "Heartbeat"
+script:WaitForChild("Heartbeat")
+frame = 1 / 60
+tf = 0
+allowframeloss = false
+tossremainder = false
+lastframe = tick()
+script.Heartbeat:Fire()
+game:GetService("RunService").Heartbeat:Connect(function(s,p)
+   tf = tf + s
+   if tf >= frame then
+	   if allowframeloss then
+		   script.Heartbeat:Fire()
+		   lastframe = tick()
+	   else
+		   for i = 1,math.floor(tf / frame) do
+			pcall(function()
+			   script.Heartbeat:Fire()
+			end)
+		   end
+		   lastframe = tick()
+	   end
+	   if tossremainder then
+		   tf = 0
+	   else
+		   tf = tf - frame * math.floor(tf / frame)
+	   end
+   end
+end)
+function swait(num)
+   if num == 0 or num == nil then
+	   ArtificialHB.Event:Wait()
+   else
+	   for i = 0,num do
+		   ArtificialHB.Event:Wait()
+	   end
+   end
+end
+
+			function fwait(seconds)
+				seconds = (seconds < 0.000001) and 0.000001 or seconds -- absolute limit of roblox, anything below just crashes lol so this limits it so it doesnt crash
+			
+				local event = game:GetService("RunService").PreRender or game:GetService("RunService").Heartbeat
+			
+				local startTime = tick()
+				while tick() - startTime < seconds do
+					event:Wait()
+				end
+			end		
+            local legitjustran = false
+	local function playanim(id,speed)
+        if legitjustran == true then return end
+        legitjustran = true 
+        pcall(function()
+            print(wtfloop)
+            print(wtfloop.Connected)
+            if wtfloop.Connected then 
+                return
+            end
+        end)
+        if dancing == true then 
+            walking = false
+            idle = false
+           end
+		if speed == nil then 
+			speed = 1
+		end
+        if dancing == true then 
+            idle = false 
+            char.Humanoid:Move(Vector3.new(0,0,-1),true)
+            walking = false 
+        end
+        wait(.005)
+        legitjustran = false
+        wait(.045)
+      
+        playanother = false 
+           local animid="rbxassetid://"..id
+   char = char
+   pcall(function()
+       hhhh=char.Humanoid.Animator
+   hhhh.Parent = nil
+   end)
+   for _,v in pairs(char.Humanoid:GetPlayingAnimationTracks()) do
+       v:Stop()
+   end
+   cframe = char.HumanoidRootPart.CFrame
+   torso = char.Torso
+   -----------------------------------------------------------
+   rs = torso["Right Shoulder"] -- Just took this from another script(Faster).
+   ls = torso["Left Shoulder"]
+   rh = torso["Right Hip"]
+   lh = torso["Left Hip"]
+   n = torso["Neck"]
+   rj = char.HumanoidRootPart["RootJoint"]
+   rsc0 = rs.C0
+   lsc0 = ls.C0
+   rhc0 = rh.C0
+   lhc0 = lh.C0
+   rjc0 = rj.C0
+   nc02 = n.C0
+   gc0 = CFrame.new()
+   orsc0 = rs.C0
+   olsc0 = ls.C0
+   orhc0 = rh.C0
+   olhc0 = lh.C0
+   orjc0 = rj.C0
+   onc0 = n.C0
+   count2 = 100
+   maxcount2=100
+   playanother = false
+   frame = 1 / (30*speed)
+   wtfloop = game:GetService("RunService").Heartbeat:Connect(function() -- Speed.
+    if playanother == true then
+        local deft = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        rs.Transform = deft
+        ls.Transform = deft
+        lh.Transform = deft
+        rj.Transform = deft
+        n.Transform  = deft
+        rh.Transform = deft  
+        task.wait(.07)
+        wtfloop:Disconnect()
+        return nil
+    else
+        count2 = count2+1
+        if count2<=maxcount2 then
+rs.Transform=rs.Transform:Lerp(rsc0,count2/maxcount2)
+ls.Transform=ls.Transform:Lerp(lsc0,count2/maxcount2)
+rh.Transform=rh.Transform:Lerp(rhc0,count2/maxcount2)
+lh.Transform=lh.Transform:Lerp(lhc0,count2/maxcount2)
+n.Transform=n.Transform:Lerp(nc02,count2/maxcount2)
+rj.Transform=rj.Transform:Lerp(rjc0,count2/maxcount2)
+        end
+    end
+end)
+
+    local animid=game:GetObjects(animid)[1]
+      anim={}
+   for i,v in pairs(animid:GetChildren()) do
+       if v:IsA("Keyframe") then
+           anim[v.Time]=kftotbl(v)
+       end
+   end
+   
+   count = 0
+   char=char
+   plr.CharacterRemoving:Connect(function()
+       if playing == true then
+           playing = false
+       end
+   end)
+   wtfloop:Disconnect()
+   while true do
+       if playanother == true then
+           local deft = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+           rs.Transform = deft
+           ls.Transform = deft
+           lh.Transform = deft
+           rj.Transform = deft
+           n.Transform  = deft
+           rh.Transform = deft  
+           task.wait(.07)
+
+           break
+       else
+           for i,oasjdadlasdkadkldjkl in pairs(anim) do
+   asdf=getnext(anim,count)
+   v=anim[asdf]
+   if playanother == true then
+       local deft = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+       rs.Transform = deft
+       ls.Transform = deft
+       lh.Transform = deft
+       rj.Transform = deft
+       n.Transform  = deft
+       rh.Transform = deft  
+       task.wait(.07)
+       break
+   end
+   if walking == true and char.Humanoid.MoveDirection == Vector3.new(0,0,0) then 
+    break 
+   end
+   frame = 1 / (30*speed)
+   if dancing == true then 
+    walking = false
+    idle = false
+   end
+   if walking == true and idle == true then 
+    playanother = true 
+   end
+   if v["Lg"] then
+       lhc0 = v["Lg"]
+   end
+   if v["Rg"] then
+       rhc0 = v["Rg"]
+   end
+   if v["Lm"] then
+       lsc0 = v["Lm"]
+   end
+   if v["Rm"] then
+       rsc0 = v["Rm"]
+   end
+   if v["To"] then
+       rjc0 = v["To"]
+   end
+   if v["Hd"] then
+       nc02 = v["Hd"]
+   end
+   count2=0
+   maxcount2=asdf-count
+   count=asdf
+  swait(1/(30*speed))
+   if playanother == true then
+    local deft = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    rs.Transform = deft
+    ls.Transform = deft
+    lh.Transform = deft
+    rj.Transform = deft
+    n.Transform  = deft
+    rh.Transform = deft  
+    break
+    end
+   count2=maxcount2
+   if v["Lg"] then
+       char.Torso["Left Hip"].Transform = CFrame.new(v["Lg"].p*char:GetScale())*v["Lg"].Rotation
+   end
+   if v["Rg"] then
+       char.Torso["Right Hip"].Transform = CFrame.new(v["Rg"].p*char:GetScale())*v["Rg"].Rotation
+   end
+   if v["Lm"] then
+       char.Torso["Left Shoulder"].Transform =  CFrame.new(v["Lm"].p*char:GetScale())*v["Lm"].Rotation
+   end
+   if v["Rm"] then
+       char.Torso["Right Shoulder"].Transform = CFrame.new(v["Rm"].p*char:GetScale())*v["Rm"].Rotation
+   end
+   if v["To"] then
+       char.HumanoidRootPart["RootJoint"].Transform = CFrame.new(v["To"].p*char:GetScale())*v["To"].Rotation
+   end
+   if v["Hd"] then
+       char.Torso["Neck"].Transform =  CFrame.new(v["Hd"].p*char:GetScale())*v["Hd"].Rotation
+   end
+           end
+       end
+   end
+           end   
+           local function stopanim()
+            playanother = true 
+            playanother = true 
+            playanother = true 
+            playanother = true 
+            sound69.PlaybackSpeed = 1
+            if dancing == true then 
+                dancing = false
+                idle = true 
+                char.Humanoid:Move(Vector3.new(0,0,-1),true)
+                walking = false 
+                wait(.065)
+                if  char.Humanoid.MoveDirection == Vector3.new(0,0,0) then
+                task.spawn(function()
+                playanim(111795598627347,1)
+                end)
+            end
+            end
+                    end
+m = plr:GetMouse()
+
+local player = game.Players.LocalPlayer
+player.Chatted:Connect(function(message)
+	if message == "/e dance1" then
+		if dancing == false then 
+            stopanim()
+            dancing = true
+            task.wait(0.1)
+            playanim(124555531803542, 1) -- /e dance1
+            OxideApi.Notification("Dances will look bad on your client, but on everyone else's client it will be smooth.",5)
+        else
+            stopanim()
+            dancing = false
+        end
+	elseif message == "/e dance2" then
+		if dancing == false then 
+            stopanim()
+            dancing = true
+            task.wait(0.1)
+            playanim(86249982789614, 1) -- /e dance2
+            OxideApi.Notification("Dances will look bad on your client, but on everyone else's client it will be smooth.",5)
+        else
+            stopanim()
+            dancing = false
+        end
+	elseif message == "/e dance3" then
+	    if dancing == false then 
+            stopanim()
+            dancing = true
+            task.wait(0.1)
+            playanim(74934193459270, 1) -- /e dance3
+            OxideApi.Notification("Dances will look bad on your client, but on everyone else's client it will be smooth.",5)
+        else
+            stopanim()
+            dancing = false
+        end
+    end
+end)
+
+local customasset = getcustomasset
+char.Humanoid:GetPropertyChangedSignal("MoveDirection"):Connect(function()
+    if char.Humanoid.MoveDirection == Vector3.new(0,0,0) and dancing == false and idle == false then
+    walking = false
+    idle = true
+    stopanim()
+    stopanim()
+    stopanim()
+    stopanim()
+    fwait(1/240)
+    if idle == true and walking == false and char.Humanoid.MoveDirection == Vector3.new(0,0,0) and dancing == false then
+        stopanim()
+        fwait(.025)
+        stopanim()
+        fwait(.035)
+        if idle == true and walking == false and char.Humanoid.MoveDirection == Vector3.new(0,0,0) and dancing == false then
+        playanim(111795598627347,0.5)
+        end
+    end
+    elseif char.Humanoid.MoveDirection ~= Vector3.new(0,0,0) and dancing == false and walking == false and dancing == false then 
+        char.Humanoid.WalkSpeed = 14*char:GetScale()
+        walking = true
+        idle = false
+        stopanim()
+        fwait(1/500)
+        if walking == true and idle == false and  char.Humanoid.MoveDirection ~= Vector3.new(0,0,0) and dancing == false then 
+            playanim(81086311080492,1)
+        end
+    end
+    end)
+
+local RunService = game:GetService("RunService")
+
+local Player = game:GetService("Players").LocalPlayer
+local PlayerMouse = Player:GetMouse()
+local Camera = workspace.CurrentCamera
+local Character =char
+
+local Humanoid = Character:WaitForChild("Humanoid")
+local IsR6 = (Humanoid.RigType == Enum.HumanoidRigType.R6)
+
+local Head = Character:WaitForChild("Head")
+local Torso = if IsR6 then Character:WaitForChild("Torso") else Character:WaitForChild("UpperTorso")
+
+local Neck = if IsR6 then Torso:WaitForChild("Neck") else Head:WaitForChild("Neck")
+local Waist = if IsR6 then nil else Torso:WaitForChild("Waist")
+
+local NeckOriginC0 = Neck.C0
+local WaistOriginC0 = if Waist then Waist.C0 else nil
+
+Neck.MaxVelocity = 1/3
+
+local AllowedStates = {Enum.HumanoidStateType.Running, Enum.HumanoidStateType.Climbing, Enum.HumanoidStateType.Swimming, Enum.HumanoidStateType.Freefall, Enum.HumanoidStateType.Seated}
+local IsAllowedState = (table.find(AllowedStates, Humanoid:GetState()) ~= nil)
+
+local find = table.find
+local atan = math.atan
+local atan2 = math.atan2
+
+Humanoid.StateChanged:Connect(function(_, new)
+	IsAllowedState = (find(AllowedStates, new) ~= nil)
+    if new == Enum.HumanoidStateType.Freefall then
+        playanim(128065930887961, 0.5)
+    end
+    if new == Enum.HumanoidStateType.Landed or new == Enum.HumanoidStateType.Running then
+        if walking == true then
+            playanim(81086311080492,0.1)
+        elseif idle == true then
+            playanim(111795598627347,0.1)
+        end
+        stopanim()
+    end
+end)
+
+RunService.RenderStepped:Connect(function(deltaTime: number)
+if char.Humanoid.MoveDirection == Vector3.new(0,0,0) then 
+    walking = false 
+    idle = true 
+else 
+    walking = true 
+    idle = false 
+end
+end)
